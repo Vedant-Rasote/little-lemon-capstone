@@ -61,7 +61,7 @@ const App = () => (
     </nav>
 
     <main className=''>
-      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 pt-5">
         <div class="col-10 col-sm-8 col-lg-6">
           <img src={heroImage} class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" />
         </div>
@@ -75,7 +75,13 @@ const App = () => (
           </div>
         </div>
       </div>
-      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+
+      {/* Curve */}
+      <svg className='full-width ' id='' viewBox="0 0 1440 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 2.26829C315.486 263.797 1161.63 -122.985 1440 44.8544" stroke="black" />
+      </svg>
+
+      <div class="row flex-lg-row-reverse align-items-center g-5 pb-5 negative-margin">
         <div class="col-10 col-sm-8 col-lg-6">
           <h1 class="fw-bold text-body-emphasis lh-1 mb-3">About Us</h1>
           <p class="lead">We are a family-owned Mediterranean restaurant located in Chicago, Illinois. Our restaurant is known for its focus on traditional recipes served with a modern twist. The chefs draw inspiration from Italian, Greek, and Turkish cultures to create a unique fusion of flavors.</p>
