@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <footer className="pt-3">
       <div className="row">
-        <div className="col-sm-12 col-md-2 mb-3 mb-md-0 text-sm-center">
+        <div className="col-sm-12 col-md-2 mb-3 mb-md-0 text-center text-sm-start">
           <img height="180" src={footerLogo} />
         </div>
-        <div className="col-sm-6 col-md-2 mx-auto">
+        <div className="col-sm-6 col-md-2 mx-auto text-center text-sm-start">
           <u><h5 className="fw-bold text-underline">Navigation</h5></u>
           <ul className="list-unstyled text-small">
             <li>
@@ -43,7 +43,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="col-sm-6 col-md-2 mx-auto">
+        <div className="col-sm-6 col-md-2 mx-auto text-center text-sm-start">
           <u><h5 className="fw-bold text-underline">Contact Us</h5></u>
           <ul className="list-unstyled text-small">
             <li>
@@ -64,7 +64,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="col-sm-6 col-md-2 mx-auto">
+        <div className="col-sm-6 col-md-2 mx-auto text-center text-sm-start">
           <u><h5 className="fw-bold text-underline">Opening Hours</h5></u>
           <ul className="list-unstyled text-small">
             <li>
@@ -75,7 +75,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="col-sm-6 col-md-2 mx-auto">
+        <div className="col-sm-6 col-md-2 mx-auto text-center text-sm-start">
           <u><h5 className="fw-bold text-underline">Legal</h5></u>
           <ul className="list-unstyled text-small">
             <li>
