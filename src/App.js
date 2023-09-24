@@ -27,22 +27,20 @@ const App = () => (
     <Header />
     <main className='mt-5'>
       <div className="row flex-lg-row-reverse align-items-center g-5 pt-5" id='home'>
-        <div className="col-10 col-sm-8 col-lg-6" >
+        <div className="col-10 col-sm-8 col-lg-6 mx-auto" >
           <img src={heroWithSilhouette} className="d-block img-fluid" alt="Bootstrap Themes" loading="lazy" />
         </div>
-        <div className="col-lg-6" style={{ backgroundImage: `url(${bgHeroText})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
+        <div className="col-lg-6 text-center text-lg-start" style={{ backgroundImage: `url(${bgHeroText})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
           <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Little Lemon</h1>
           <h3 className="fw-medium text-body-emphasis lh-1 mb-3">Chicago</h3>
           <p className="lead">Discover our family-owned Mediterranean eatery, where we harmonize tradition with modernity, crafting delectable dishes to delight your palate.</p>
-          <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-            <button type="button" className="btn btn-warning rounded-pill px-3">Order Online</button>
-            <button type="button" className="btn btn-dark rounded-pill px-3" >Reserve Table</button>
-          </div>
+          <button type="button" className="btn btn-warning rounded-pill px-3 mr-2">Order Online</button>
+          <button type="button" className="btn btn-dark rounded-pill px-3 mx-2">Reserve Table</button>
         </div>
       </div>
 
       {/* Curve */}
-      <svg className='full-width ' id='' viewBox="0 0 1440 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className='full-width d-none d-lg-inline' viewBox="0 0 1440 97" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 2.26829C315.486 263.797 1161.63 -122.985 1440 44.8544" stroke="black" />
       </svg>
 
@@ -176,7 +174,7 @@ const App = () => (
             <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
           </svg>
         </div>
-        <div className="card mx-auto w-50 border-0 bg-transparent">
+        <div className="card w-75 mx-auto border-0 bg-transparent">
           <div className="card-body brand_green_transparent rounded-2 pb-0">
             <figure>
               <blockquote>
@@ -192,9 +190,9 @@ const App = () => (
         </div>
       </section>
 
-      <section className='w-50 mx-auto border-top border-bottom my-3' id='reservation'>
+      <section className='mx-auto background-light my-3' id='reservation'>
         <h3 className="my-4 text-center">Reserve a Table</h3>
-        <p className='text-center'>To help us find the best table for you, select the preferred <br />party size, date and time of your reservation.</p>
+        <p className='text-center'>To help us find the best table for you, select the preferred party size, date and time of your reservation.</p>
         <form className="row g-3">
           <div className="col-md-4">
             <label for="party_size" className="form-label">Party Size</label>
@@ -214,9 +212,9 @@ const App = () => (
         </form>
       </section>
 
-      <section className='' id='contact'>
-        <div className="row mb-3">
-          <div className="col-sm-6">
+      <section id='contact'>
+        <div className="row">
+          <div className="col-sm-6 mb-3">
             <h3>We would love to hear from you</h3>
             <p>Drop us a line and we'll get back to you</p>
             <form className="row g-3">
@@ -241,16 +239,16 @@ const App = () => (
               </div>
             </form>
           </div>
-          <div className="col-sm-6">
+          <div className="col-sm-6 mb-3">
             <iframe
               width="100%"
               height="450"
               loading="lazy"
               allowfullscreen
               referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed/v1/place?key=API_KEY
-    &q=Space+Needle,Seattle+WA">
-            </iframe>
+              src="https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Space+Needle,Seattle+WA"
+              title="Google Maps - Space Needle, Seattle WA"
+            ></iframe>
           </div>
         </div>
       </section>
