@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import heroImage from "./images/hero_image.png"
-import about_us_image from "./images/about_us_image.png"
+import heroWithSilhouette from "./images/hero_with_silhouette.png"
+import bgHeroText from "./images/bg_hero_text.png"
+import about_us_image from "./images/about_us_image_silhouette.png"
 import gal_img_1 from "./images/gal_img_1.jpg"
 import gal_img_2 from "./images/gal_img_2.jpg"
 import gal_img_3 from "./images/gal_img_3.jpg"
@@ -24,15 +25,15 @@ import DishCard from './DishCard'
 const App = () => (
   <Container className='karla'>
     <Header />
-    <main className=''>
-      <div className="row flex-lg-row-reverse align-items-center g-5 pt-5">
-        <div className="col-10 col-sm-8 col-lg-6">
-          <img src={heroImage} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" />
+    <main className='mt-5'>
+      <div className="row flex-lg-row-reverse align-items-center g-5 pt-5" id='home'>
+        <div className="col-10 col-sm-8 col-lg-6" >
+          <img src={heroWithSilhouette} className="d-block img-fluid" alt="Bootstrap Themes" loading="lazy" />
         </div>
-        <div className="col-lg-6">
+        <div className="col-lg-6" style={{ backgroundImage: `url(${bgHeroText})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
           <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Little Lemon</h1>
           <h3 className="fw-medium text-body-emphasis lh-1 mb-3">Chicago</h3>
-          <p className="lead">We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+          <p className="lead">Discover our family-owned Mediterranean eatery, where we harmonize tradition with modernity, crafting delectable dishes to delight your palate.</p>
           <div className="d-grid gap-2 d-md-flex justify-content-md-start">
             <button type="button" className="btn btn-warning rounded-pill px-3">Order Online</button>
             <button type="button" className="btn btn-dark rounded-pill px-3" >Reserve Table</button>
@@ -45,8 +46,8 @@ const App = () => (
         <path d="M0 2.26829C315.486 263.797 1161.63 -122.985 1440 44.8544" stroke="black" />
       </svg>
 
-      <div className="row flex-lg-row-reverse align-items-center g-5 pb-5 negative-margin">
-        <div className="col-10 col-sm-8 col-lg-6">
+      <div className="row flex-lg-row-reverse align-items-center g-5 pb-5 negative-margin" id='about'>
+        <div className="col-10 col-sm-8 col-lg-6" style={{ backgroundImage: `url(${bgHeroText})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
           <h1 className="fw-bold text-body-emphasis lh-1 mb-3">About Us</h1>
           <p className="lead">We are a family-owned Mediterranean restaurant located in Chicago, Illinois. Our restaurant is known for its focus on traditional recipes served with a modern twist. The chefs draw inspiration from Italian, Greek, and Turkish cultures to create a unique fusion of flavors.</p>
           <div className="d-grid gap-2 d-md-flex justify-content-md-start">
@@ -57,7 +58,8 @@ const App = () => (
           <img src={about_us_image} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" />
         </div>
       </div>
-      <div className="row mb-3">
+
+      <div className="row mb-3" id='gallery'>
         <div className='d-flex justify-content-between align-items-center'>
           <h3 className="fw-bold text-body-emphasis lh-1 mb-3">Food Gallery</h3>
           <div className='mb-3'>
@@ -102,7 +104,7 @@ const App = () => (
             imageSource={pizza_style_bolognese_pasta}
             imageAltText='Image of Pizza-Style Bolognese Pasta'
             title='Pizza-Style Bolognese Pasta'
-            description='A fusion of Bolognese sauce, Italian spices, and pasta, topped with melted cheese.'
+            description='Bolognese sauce, Italian spices, and pasta, topped with melted cheese.'
             price='$29.99'
             starRating={5}
             reviewsCount={783}
@@ -114,7 +116,7 @@ const App = () => (
             imageSource={three_color_rotini_pasta}
             imageAltText='Image of Three-Color Rotini Pasta'
             title='Three-Color Rotini Pasta'
-            description='A Mediterranean delight with black mushrooms, tomatoes, spices, and creamy avocados.'
+            description='Medley of tomatoes, fresh parsley, vibrant greens, and black olives.'
             price='$26.50'
             starRating={5}
             reviewsCount={783}
@@ -146,11 +148,11 @@ const App = () => (
         </div>
 
       </div>
-      <button className="btn btn-dark rounded-pill d-block mx-auto mb-4" type="button">View Full Menu</button>
+      <button className="btn btn-dark rounded-pill d-block mx-auto mb-4" type="button" id='menu'>View Full Menu</button>
 
-      <section>
+      <section id='testimonials'>
         <h3 className="mb-4 text-center">What Our Happy Customer<br /> Talk About Us</h3>
-        <div className='d-flex justify-content-center align-items-center'>
+        <div className='d-flex justify-content-center align-items-center flex-wrap'>
           <button className="btn btn-dark rounded-circle p-2 lh-1 mx-2" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-left" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
@@ -190,7 +192,7 @@ const App = () => (
         </div>
       </section>
 
-      <section className='w-50 mx-auto border-top border-bottom my-3'>
+      <section className='w-50 mx-auto border-top border-bottom my-3' id='reservation'>
         <h3 className="my-4 text-center">Reserve a Table</h3>
         <p className='text-center'>To help us find the best table for you, select the preferred <br />party size, date and time of your reservation.</p>
         <form className="row g-3">

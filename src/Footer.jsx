@@ -5,11 +5,11 @@ const Footer = () => {
   return (
     <footer className="pt-3">
       <div className="row">
-        <div className="col-12 col-md">
+        <div className="col-sm-12 col-md-2 mb-md-3">
           <img height="180" src={footerLogo} />
         </div>
-        <div className="col-6 col-md">
-          <h5>Pages</h5>
+        <div className="col-sm-6 col-md-2 mx-auto">
+          <u><h5 className="fw-bold text-underline">Navigation</h5></u>
           <ul className="list-unstyled text-small">
             <li>
               <a className="link-dark text-decoration-none" href="#home">
@@ -43,8 +43,8 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="col-6 col-md">
-          <h5>Contact Us</h5>
+        <div className="col-sm-6 col-md-2 mx-auto">
+          <u><h5 className="fw-bold text-underline">Contact Us</h5></u>
           <ul className="list-unstyled text-small">
             <li>
               <a className="link-dark text-decoration-none" href="tel:123 456 6780">
@@ -64,8 +64,8 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="col-6 col-md">
-          <h5>Opening Hours</h5>
+        <div className="col-sm-6 col-md-2 mx-auto">
+          <u><h5 className="fw-bold text-underline">Opening Hours</h5></u>
           <ul className="list-unstyled text-small">
             <li>
                 <span className="fw-medium">Mon - Fri:</span> 11am - 10pm
@@ -75,8 +75,8 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="col-6 col-md">
-          <h5>Legal</h5>
+        <div className="col-sm-6 col-md-2 mx-auto">
+          <u><h5 className="fw-bold text-underline">Legal</h5></u>
           <ul className="list-unstyled text-small">
             <li>
               <a className="link-dark text-decoration-none" href="#">
