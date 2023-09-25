@@ -1,9 +1,10 @@
 import React from "react";
 import footerLogo from "./images/Asset 20@4x.png";
+import reserveTableBg from './images/reserve_table_bg.png'
 
 const Footer = () => {
   return (
-    <footer className="pt-3">
+    <footer className="pt-3" style={{ backgroundImage: `url(${reserveTableBg})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
       <div className="row">
         <div className="col-sm-12 col-md-2 mb-3 mb-md-0 text-center text-sm-start">
           <img height="180" src={footerLogo} />

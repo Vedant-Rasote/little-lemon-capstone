@@ -5,8 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(to bottom, #f0f9f9, #FFFBEC) top,
-  linear-gradient(to top, #f0f9f9, #FFFBEC) bottom;
+  background: linear-gradient(to bottom, #fffdf5, #FFFBEC) top,
+    linear-gradient(to top, #fffdf5, #FFFBEC) bottom;
 }
 
 code {
@@ -42,12 +42,7 @@ code {
   }
 }
 
-.image_shadow {
-  filter: drop-shadow(0px 4px 8px #b3c9c277);
-}
-
 .glass_morph {
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
 }
-

@@ -18,6 +18,8 @@ import testimonial_4 from './images/testimonial_4.png'
 import testimonial_5 from './images/testimonial_5.png'
 import testimonial_6 from './images/testimonial_6.png'
 import testimonial_7 from './images/testimonial_7.png'
+import testimonialBg from './images/testimonial_bg.png'
+import reserveTableBg from './images/reserve_table_bg.png'
 import Header from './Header';
 import Footer from './Footer';
 import DishCard from './DishCard'
@@ -144,8 +146,7 @@ const App = () => (
 
       </div>
       <button className="btn btn-dark rounded-pill d-block mx-auto mb-4" type="button" id='menu'>View Full Menu</button>
-
-      <section id='testimonials'>
+      <section id='testimonials' className='py-3' style={{ backgroundImage: `url(${testimonialBg})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
         <h3 className="mb-4 text-center">What Our Happy Customer<br /> Talk About Us</h3>
         <div className='d-flex justify-content-center align-items-center flex-wrap'>
           <button className="btn btn-dark rounded-circle p-2 lh-1 mx-2" type="button">
@@ -172,7 +173,7 @@ const App = () => (
           </svg>
         </div>
         <div className="card w-75 mx-auto border-0 bg-transparent">
-          <div className="card-body brand_green_transparent rounded-2 pb-0 text-center text-lg-start">
+          <div className="card-body brand_green_transparent glass_morph rounded-2 pb-0 text-center text-lg-start">
             <figure>
               <blockquote>
                 <q>
@@ -187,7 +188,7 @@ const App = () => (
         </div>
       </section>
 
-      <section className='mx-auto border-top border-bottom my-3'>
+      <section className='mx-auto border-top border-bottom mb-3 glass_morph' id="reserve_table_section" style={{ backgroundImage: `url(${reserveTableBg})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
         <h3 className="my-4 text-center">Reserve a Table</h3>
         <p className='text-center'>To help us find the best table for you, select the preferred party size, date and time of your reservation.</p>
         <form className="row g-3">
