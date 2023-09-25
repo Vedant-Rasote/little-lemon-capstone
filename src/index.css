@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FFFBEC !important;
+  background: linear-gradient(to bottom, #f0f9f9, #FFFBEC) top,
+  linear-gradient(to top, #f0f9f9, #FFFBEC) bottom;
 }
 
 code {
@@ -49,3 +50,4 @@ code {
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
 }
+

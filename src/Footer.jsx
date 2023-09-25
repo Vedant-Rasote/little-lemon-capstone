@@ -22,7 +22,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a className="link-dark text-decoration-none" href="#menu">
+              <a className="link-dark text-decoration-none" href="#specials">
                 Menu
               </a>
             </li>
@@ -32,7 +32,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a className="link-dark text-decoration-none" href="#order_online">
+              <a className="link-dark text-decoration-none" href="#specials">
                 Order online
               </a>
             </li>

@@ -17,9 +17,9 @@ const Header = () => {
             <Nav className="justify-content-center flex-grow-1 fw-medium">
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="#menu">Menu</Nav.Link>
+              <Nav.Link href="#specials">Menu</Nav.Link>
               <Nav.Link href="#reservation">Reservation</Nav.Link>
-              <Nav.Link href="#menu">Order Online</Nav.Link>
+              <Nav.Link href="#specials">Order Online</Nav.Link>
             </Nav>
 
             <div className="d-flex justify-content-start">

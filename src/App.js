@@ -76,8 +76,7 @@ const App = () => (
         <div className="col-md-3 col-sm-6"><img src={gal_img_3} className="img-thumbnail" alt="gal_img_3" /></div>
         <div className="col-md-3 col-sm-6"><img src={gal_img_4} className="img-thumbnail" alt="gal_img_4" /></div>
       </div>
-      <button className="btn btn-dark rounded-pill d-block mx-auto" type="button">View More</button>
-
+      <button className="btn btn-dark rounded-pill d-block mx-auto" id="specials" type="button">View More</button>
       <div className="row mb-3">
         <div className='d-flex justify-content-between align-items-center'>
           <h3 className="fw-bold text-body-emphasis lh-1 mb-3">This Week Specials</h3>
@@ -180,7 +179,7 @@ const App = () => (
                   Little Lemon exceeded my expectations in every way! From the exquisite Mediterranean flavors to the warm and inviting atmosphere, dining here was an absolute delight. I highly recommend their Pizza-Style Bolognese Pasta - a true masterpiece. The staff's attention to detail and top-notch service made the experience even more memorable. Little Lemon is now my go-to spot for creating special memories!
                 </q>
               </blockquote>
-              <figcaption className="blockquote-footer mb-0 fw-bold">
+              <figcaption className="blockquote-footer mb-0 fw-bold" id='reservation'>
                 <cite title="Source Title">Kathryn Murphy</cite> - Loyal Customer
               </figcaption>
             </figure>
@@ -188,7 +187,7 @@ const App = () => (
         </div>
       </section>
 
-      <section className='mx-auto background-light my-3' id='reservation'>
+      <section className='mx-auto border-top border-bottom my-3'>
         <h3 className="my-4 text-center">Reserve a Table</h3>
         <p className='text-center'>To help us find the best table for you, select the preferred party size, date and time of your reservation.</p>
         <form className="row g-3">
