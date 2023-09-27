@@ -46,3 +46,14 @@ code {
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
 }
+
+.btn-warning {
+  background-color: #F4CE14 !important;
+  border-color: #F4CE14;
+}
+
+.btn-warning:hover {
+  color: white !important;
+  background-color: #495E57 !important;
+  border-color: #495E57 !important;
+}

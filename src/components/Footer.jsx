@@ -1,6 +1,6 @@
 import React from "react";
-import footerLogo from "./images/Asset 20@4x.png";
-import reserveTableBg from './images/reserve_table_bg.png'
+import footerLogo from "../images/Asset 20@4x.png";
+import reserveTableBg from '../images/reserve_table_bg.png'
 
 const Footer = () => {
   return (
@@ -58,10 +58,8 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a className="link-dark text-decoration-none" href="#location">
-                <span className="fw-medium">Address:</span> 123 Lemon
-                GroveChicago, IL 60601
-              </a>
+              <span className="fw-medium">Address:</span> 123 Lemon
+              GroveChicago, IL 60601
             </li>
           </ul>
         </div>
@@ -69,10 +67,10 @@ const Footer = () => {
           <u><h5 className="fw-bold text-underline">Opening Hours</h5></u>
           <ul className="list-unstyled text-small">
             <li>
-                <span className="fw-medium">Mon - Fri:</span> 11am - 10pm
+              <span className="fw-medium">Mon - Fri:</span> 11am - 10pm
             </li>
             <li>
-                <span className="fw-medium">Sat - Sun:</span> 11am - 12am
+              <span className="fw-medium">Sat - Sun:</span> 11am - 12am
             </li>
           </ul>
         </div>
