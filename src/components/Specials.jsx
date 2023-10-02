@@ -1,11 +1,47 @@
 import React from 'react'
-import shrimp_veggie_noodles from '../images/shrimp_veggie_noodles.png';
-import pizza_style_bolognese_pasta from '../images/pizza_style_bolognese_pasta.png';
-import salmon_vegetables_salad from '../images/salmon_vegetables_salad.png';
-import three_color_rotini_pasta from '../images/three_color_rotini_pasta.png';
 import DishCard from '../components/DishCard';
 
 const Specials = () => {
+    const specials = [
+        {
+            "imageSource": require('../images/pizza_style_bolognese_pasta.png'),
+            "imageAltText": "Image of Pizza-Style Bolognese Pasta",
+            "title": "Pizza-Style Bolognese Pasta",
+            "description": "Bolognese sauce, Italian spices, and pasta, topped with melted cheese.",
+            "price": "$29.99",
+            "starRating": 5,
+            "reviewsCount": 783
+        },
+        {
+            "imageSource": require('../images/three_color_rotini_pasta.png'),
+            "imageAltText": "Image of Three-Color Rotini Pasta",
+            "title": "Three-Color Rotini Pasta",
+            "description": "Medley of tomatoes, fresh parsley, vibrant greens, and black olives.",
+            "price": "$26.50",
+            "starRating": 5,
+            "reviewsCount": 783
+        },
+        {
+            "imageSource": require('../images/shrimp_veggie_noodles.png'),
+            "imageAltText": "Image of Shrimp and Veggie Noodles",
+            "title": "Shrimp and Veggie Noodles",
+            "description": "Succulent shrimp, crisp vegetables, and tender noodles in a savory sauce.",
+            "price": "$28.99",
+            "starRating": 5,
+            "reviewsCount": 783
+        },
+        {
+            "imageSource": require('../images/salmon_vegetables_salad.png'),
+            "imageAltText": "Image of Salmon Veggie Salad",
+            "title": "Salmon Veggie Salad",
+            "description": "Grilled salmon on fresh veggies with zesty vinaigrette and olive oil.",
+            "price": "$18.99",
+            "starRating": 5,
+            "reviewsCount": 783
+        }
+    ]
+
+
     return (
         <section>
             <div className="row mb-3">
@@ -25,53 +61,19 @@ const Specials = () => {
                     </div>
                 </div>
 
-                <div className="col-md-3 col-sm-6">
-                    <DishCard
-                        imageSource={pizza_style_bolognese_pasta}
-                        imageAltText='Image of Pizza-Style Bolognese Pasta'
-                        title='Pizza-Style Bolognese Pasta'
-                        description='Bolognese sauce, Italian spices, and pasta, topped with melted cheese.'
-                        price='$29.99'
-                        starRating={5}
-                        reviewsCount={783}
-                    />
-                </div>
-
-                <div className="col-md-3 col-sm-6">
-                    <DishCard
-                        imageSource={three_color_rotini_pasta}
-                        imageAltText='Image of Three-Color Rotini Pasta'
-                        title='Three-Color Rotini Pasta'
-                        description='Medley of tomatoes, fresh parsley, vibrant greens, and black olives.'
-                        price='$26.50'
-                        starRating={5}
-                        reviewsCount={783}
-                    />
-                </div>
-
-                <div className="col-md-3 col-sm-6">
-                    <DishCard
-                        imageSource={shrimp_veggie_noodles}
-                        imageAltText='Image of Shrimp and Veggie Noodles'
-                        title='Shrimp and Veggie Noodles'
-                        description='Succulent shrimp, crisp vegetables, and tender noodles in a savory sauce.'
-                        price='$28.99'
-                        starRating={5}
-                        reviewsCount={783}
-                    />
-                </div>
-
-                <div className="col-md-3 col-sm-6">
-                    <DishCard
-                        imageSource={salmon_vegetables_salad}
-                        imageAltText='Image of SalmonVeggie Salad'
-                        title='Salmon Veggie Salad'
-                        description='Grilled salmon on fresh veggies with zesty vinaigrette and olive oil.'
-                        price='$18.99'
-                        starRating={5}
-                        reviewsCount={783}
-                    />
-                </div>
+                {specials.map((dish, index) => (
+                    <div key={index} className="col-md-3 col-sm-6">
+                        <DishCard
+                            imageSource={dish.imageSource}
+                            imageAltText={dish.imageAltText}
+                            title={dish.title}
+                            description={dish.description}
+                            price={dish.price}
+                            starRating={dish.starRating}
+                            reviewsCount={dish.reviewsCount}
+                        />
+                    </div>
+                ))}
             </div>
 
             <button className="btn btn-dark rounded-pill d-block mx-auto mb-4" type="button" id='menu'>View Full Menu</button>
