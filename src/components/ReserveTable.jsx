@@ -16,8 +16,8 @@ const ReserveTable = () => {
   const onSubmit = (values) => {
     console.log(values);
     const { partySize, date, time, } = values;
-    console.log(`/table_reservation_details?partySize=${partySize}`&`date=${date}`&`time=${time}`);
-    navigate(`/table_reservation_details?partySize=${partySize}`&`date=${date}`&`time=${time}`);
+    console.log(`/table_reservation_details?partySize=${partySize}` & `date=${date}` & `time=${time}`);
+    navigate(`/table_reservation_details`);
   }
 
   const validationSchema = Yup.object({
@@ -109,7 +109,7 @@ const ReserveTable = () => {
               name="time"
               {...formik.getFieldProps("time")}
             >
-              <option selected hidden value=""></option>
+              <option defaultValue hidden value=""></option>
               <option value="17:00">17:00</option>
               <option value="17:30">17:30</option>
               <option value="18:30">18:30</option>
@@ -127,7 +127,7 @@ const ReserveTable = () => {
           </Form.Group>
         </div>
         <div className="col-12 text-center">
-          <Button type="submit" role="submit" className="btn btn-dark rounded-pill mb-3">
+          <Button type="submit" className="btn btn-dark rounded-pill mb-3">
             Find a Table
           </Button>
         </div>
