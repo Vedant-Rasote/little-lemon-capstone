@@ -23,7 +23,7 @@ code {
 }
 
 .brand_green_transparent {
-  background-color: #b3c9c277;
+  background-color: #b3c9c277 !important;
 }
 
 .full-width {

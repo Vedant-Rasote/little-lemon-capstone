@@ -4,7 +4,7 @@ import CurveDivider from './CurveDivider';
 import AboutUs from './AboutUs';
 import Gallery from './Gallery';
 import Specials from './Specials';
-import ReserveTable from './ReserveTable';
+import BookingSection from './BookingSection';
 import Testimonials from './Testimonials';
 import Contact from './Contact';
 
@@ -18,7 +18,7 @@ const Home = () => {
                 <Gallery />
                 <Specials />
                 <Testimonials />
-                <ReserveTable />
+                <BookingSection/>
                 <Contact />
             </main>
             <hr />

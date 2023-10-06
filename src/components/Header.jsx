@@ -3,14 +3,15 @@ import headerLogo from "../images/Asset 16@4x.png";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Container } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header>
       <Navbar collapseOnSelect expand="lg" className="border-bottom glass_morph fixed-top">
         <Container>
-          <Navbar.Brand href="#home">
-            <img width="200" src={headerLogo} alt="Little Lemon logo" />
+          <Navbar.Brand>
+            <Link to='/'><img width="200" src={headerLogo} alt="Little Lemon logo" /></Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -18,8 +19,8 @@ const Header = () => {
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#about">About</Nav.Link>
               <Nav.Link href="#specials">Menu</Nav.Link>
-              <Nav.Link href="#reservation">Reservation</Nav.Link>
-              <Nav.Link href="#specials">Order Online</Nav.Link>
+              <Nav.Link href="#gallery">Gallery</Nav.Link>
+              <Nav.Link href="#contact">Contact</Nav.Link>
             </Nav>
 
             <div className="d-flex justify-content-start">

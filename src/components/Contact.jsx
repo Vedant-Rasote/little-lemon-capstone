@@ -30,7 +30,7 @@ const Contact = () => {
                     </form>
                 </div>
                 <div className="col-sm-6 mb-3 mb-md-0">
-                    {/* <iframe
+                    <iframe
                         title="Chicago City Map"
                         width="100%"
                         height="330"
@@ -41,7 +41,7 @@ const Contact = () => {
                         aria-hidden="false"
                         tabIndex="0"
                         sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                    ></iframe> */}
+                    ></iframe>
                     <p className='text-center'>123 Lemon Grove<br /> Chicago, IL 60601</p>
                 </div>
             </div>
