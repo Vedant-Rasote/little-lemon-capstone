@@ -1,15 +1,15 @@
 import React from "react";
 import bgHeroText from "../images/bg_hero_text.png";
-import about_us_image from "../images/about_us_image_silhouette.png";
+import aboutUsImage from "../images/about_us_image_silhouette.png";
 
 const AboutUs = () => {
   return (
     <div className="row align-items-center g-5 py-5 negative-margin" id="about">
       <div className="col-10 col-sm-8 col-lg-6 mx-auto">
         <img
-          src={about_us_image}
+          src={aboutUsImage}
           className="d-block img-fluid"
-          alt="Bootstrap Themes"
+          alt="Restaurant interior"
           loading="lazy"
         />
       </div>
@@ -29,7 +29,11 @@ const AboutUs = () => {
           served with a modern twist. The chefs draw inspiration from Italian,
           Greek, and Turkish cultures to create a unique fusion of flavors.
         </p>
-        <button type="button" className="btn btn-warning rounded-pill px-3">
+        <button
+          type="button"
+          className="btn btn-warning rounded-pill px-3"
+          aria-label="View more details about Little Lemon Restaurant"
+        >
           View More Details
         </button>
       </div>

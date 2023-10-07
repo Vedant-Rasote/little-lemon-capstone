@@ -6,26 +6,26 @@ const Contact = () => {
             <h3 className="mb-4 text-center">Contact Us</h3>
             <div className="row">
                 <div className="col-sm-6 mb-3 mb-md-0">
-                    <p className='text-center'>We would love to hear from you! Drop us a line and we'll get back to you</p>
+                    <p className='text-center'>We would love to hear from you! Drop us a line, and we'll get back to you</p>
                     <form className="row g-3">
                         <div className="col-12">
                             <label htmlFor="full_name" className="form-label">Full Name</label>
-                            <input type="text" className="form-control" id="full_name" placeholder="ex. John Doe" />
+                            <input type="text" className="form-control" id="full_name" placeholder="ex. John Doe" aria-label="Full Name" />
                         </div>
                         <div className="col-md-6">
                             <label htmlFor="email" className="form-label">Email</label>
-                            <input type="email" className="form-control" id="email" placeholder="ex. johndoe@email.com" />
+                            <input type="email" className="form-control" id="email" placeholder="ex. johndoe@email.com" aria-label="Email" />
                         </div>
                         <div className="col-md-6">
                             <label htmlFor="phone" className="form-label">Phone</label>
-                            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" className="form-control" id="phone" placeholder="ex. 99999 88888" required />
+                            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" className="form-control" id="phone" placeholder="ex. 99999 88888" required aria-label="Phone" />
                         </div>
                         <div className="col-12">
                             <label htmlFor="message" className="form-label">Message</label>
-                            <textarea className="form-control" id="message" rows="3"></textarea>
+                            <textarea className="form-control" id="message" rows="3" aria-label="Message"></textarea>
                         </div>
                         <div className="col-12 text-center">
-                            <button type="button" className="btn btn-dark rounded-pill" >Send</button>
+                            <button type="button" className="btn btn-dark rounded-pill" aria-label="Send Message">Send</button>
                         </div>
                     </form>
                 </div>
@@ -40,8 +40,9 @@ const Contact = () => {
                         aria-hidden="false"
                         tabIndex="0"
                         sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                        aria-label="Google Map of Chicago, IL"
                     ></iframe>
-                    <p className='text-center'>123 Lemon Grove<br /> Chicago, IL 60601</p>
+                    <p className='text-center' aria-label="Address">123 Lemon Grove<br /> Chicago, IL 60601</p>
                 </div>
             </div>
         </section>

@@ -200,6 +200,7 @@ const BookingPage = () => {
                 e.preventDefault();
                 setStep(1);
               }}
+              aria-label="Reservation Details"
             >
               {details.date && (
                 <svg
@@ -207,8 +208,9 @@ const BookingPage = () => {
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-check2-circle"
+                  className="bi bi-check2-circle"
                   viewBox="0 0 16 16"
+                  aria-hidden="true"
                 >
                   <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
                   <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
@@ -228,6 +230,7 @@ const BookingPage = () => {
                 e.preventDefault();
                 setStep(2);
               }}
+              aria-label="Your Details"
             >
               {details.firstName && (
                 <svg
@@ -235,8 +238,9 @@ const BookingPage = () => {
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-check2-circle"
+                  className="bi bi-check2-circle"
                   viewBox="0 0 16 16"
+                  aria-hidden="true"
                 >
                   <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
                   <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
@@ -255,6 +259,7 @@ const BookingPage = () => {
                 e.preventDefault();
                 setStep(3);
               }}
+              aria-label="Credit Card Details"
             >
               {details.cardNumber && (
                 <svg
@@ -262,8 +267,9 @@ const BookingPage = () => {
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-check2-circle"
+                  className="bi bi-check2-circle"
                   viewBox="0 0 16 16"
+                  aria-hidden="true"
                 >
                   <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
                   <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
@@ -282,6 +288,7 @@ const BookingPage = () => {
                 e.preventDefault();
                 setStep(4);
               }}
+              aria-label="Summary"
             >
               {details.acceptTerms && (
                 <svg
@@ -289,8 +296,9 @@ const BookingPage = () => {
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-check2-circle"
+                  className="bi bi-check2-circle"
                   viewBox="0 0 16 16"
+                  aria-hidden="true"
                 >
                   <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
                   <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
@@ -304,15 +312,12 @@ const BookingPage = () => {
           <Form
             className="row g-3 pt-3"
             onSubmit={reservationFormik.handleSubmit}
+            aria-label="Reservation Form"
           >
-            <p className="text-center">
+            <p className="text-center" aria-label="Reservation Instructions">
               To help us find the best table for you, select the preferred party
-              size, date and time of your reservation.
+              size, date, and time of your reservation.
             </p>
-            {/* <div className="alert alert-danger" role="alert">
-        <p className='text-center'>Unfortunately there is no availability at the selected time. Call us on 123 456 6780 to see if we can help!
-      For large group booking enquiries, please submit a request.</p>
-        </div> */}
             <div className="col-md-6">
               <Form.Group>
                 <Form.Label htmlFor="date">Date</Form.Label>
@@ -321,6 +326,7 @@ const BookingPage = () => {
                   id="date"
                   name="date"
                   {...reservationFormik.getFieldProps("date")}
+                  aria-label="Select Date"
                 />
                 {reservationFormik.touched.date &&
                   reservationFormik.errors.date ? (
@@ -338,6 +344,7 @@ const BookingPage = () => {
                   id="time"
                   name="time"
                   {...reservationFormik.getFieldProps("time")}
+                  aria-label="Select Time"
                 >
                   <option defaultValue hidden value="">
                     __:__
@@ -364,6 +371,7 @@ const BookingPage = () => {
                   id="partySize"
                   name="partySize"
                   {...reservationFormik.getFieldProps("partySize")}
+                  aria-label="Select Party Size"
                 />
                 {reservationFormik.touched.partySize &&
                   reservationFormik.errors.partySize ? (
@@ -381,6 +389,7 @@ const BookingPage = () => {
                   id="occasion"
                   name="occasion"
                   {...reservationFormik.getFieldProps("occasion")}
+                  aria-label="Select Occasion"
                 >
                   <option defaultValue value=""></option>
                   <option key="Anniversary" value="Anniversary">
@@ -402,7 +411,7 @@ const BookingPage = () => {
               </Form.Group>
             </div>
             <div className="col-12 text-center">
-              <Button type="submit" className="btn btn-dark rounded-pill mb-3">
+              <Button type="submit" className="btn btn-dark rounded-pill mb-3" aria-label="Find a Table Button">
                 Find a Table
               </Button>
             </div>
@@ -413,8 +422,9 @@ const BookingPage = () => {
           <Form
             className="row g-3 pt-3"
             onSubmit={personalDetailsFormik.handleSubmit}
+            aria-label="Personal Details Form"
           >
-            <p className="text-center">Please provide your personal details.</p>
+            <p className="text-center" aria-label="Personal Details Instructions">Please provide your personal details.</p>
             <div className="col-md-6">
               <Form.Group>
                 <Form.Label htmlFor="firstName">First Name</Form.Label>
@@ -424,6 +434,7 @@ const BookingPage = () => {
                   name="firstName"
                   placeholder="Enter your first name"
                   {...personalDetailsFormik.getFieldProps("firstName")}
+                  aria-label="First Name"
                 />
                 {personalDetailsFormik.touched.firstName &&
                   personalDetailsFormik.errors.firstName ? (
@@ -442,6 +453,7 @@ const BookingPage = () => {
                   name="lastName"
                   placeholder="Enter your last name"
                   {...personalDetailsFormik.getFieldProps("lastName")}
+                  aria-label="Last Name"
                 />
                 {personalDetailsFormik.touched.lastName &&
                   personalDetailsFormik.errors.lastName ? (
@@ -460,6 +472,7 @@ const BookingPage = () => {
                   name="phone"
                   placeholder="Enter your phone number"
                   {...personalDetailsFormik.getFieldProps("phone")}
+                  aria-label="Phone Number"
                 />
                 {personalDetailsFormik.touched.phone &&
                   personalDetailsFormik.errors.phone ? (
@@ -478,6 +491,7 @@ const BookingPage = () => {
                   name="email"
                   placeholder="Enter your email address"
                   {...personalDetailsFormik.getFieldProps("email")}
+                  aria-label="Email Address"
                 />
                 {personalDetailsFormik.touched.email &&
                   personalDetailsFormik.errors.email ? (
@@ -498,11 +512,12 @@ const BookingPage = () => {
                   {...personalDetailsFormik.getFieldProps(
                     "specialRequirements"
                   )}
+                  aria-label="Special Requirements"
                 />
               </Form.Group>
             </div>
             <div className="col-12 text-center">
-              <Button type="submit" className="btn btn-dark rounded-pill mb-3">
+              <Button type="submit" className="btn btn-dark rounded-pill mb-3" aria-label="Submit Button">
                 Submit
               </Button>
             </div>
@@ -513,10 +528,9 @@ const BookingPage = () => {
           <Form
             className="row g-3 pt-3"
             onSubmit={creditCardFormik.handleSubmit}
+            aria-label="Credit Card Details Form"
           >
-            <p className="text-center">
-              Credit card details are required to secure your booking.
-            </p>
+            <p className="text-center" aria-label="Credit Card Details Instructions">Credit card details are required to secure your booking.</p>
             <div className="col-md-6">
               <Form.Group>
                 <Form.Label htmlFor="cardholderName">Cardholder Name</Form.Label>
@@ -526,6 +540,7 @@ const BookingPage = () => {
                   id="cardholderName"
                   placeholder="Enter cardholder name"
                   {...creditCardFormik.getFieldProps("cardholderName")}
+                  aria-label="Cardholder Name"
                 />
                 {creditCardFormik.touched.cardholderName &&
                   creditCardFormik.errors.cardholderName ? (
@@ -544,6 +559,7 @@ const BookingPage = () => {
                   id="cardNumber"
                   placeholder="Enter card number"
                   {...creditCardFormik.getFieldProps("cardNumber")}
+                  aria-label="Card Number"
                 />
                 {creditCardFormik.touched.cardNumber &&
                   creditCardFormik.errors.cardNumber ? (
@@ -562,6 +578,7 @@ const BookingPage = () => {
                   name="expiry"
                   id="expiry"
                   {...creditCardFormik.getFieldProps("expiry")}
+                  aria-label="Expiry Date"
                 />
                 {creditCardFormik.touched.expiry &&
                   creditCardFormik.errors.expiry ? (
@@ -580,6 +597,7 @@ const BookingPage = () => {
                   id="cvc"
                   placeholder="Enter CVC"
                   {...creditCardFormik.getFieldProps("cvc")}
+                  aria-label="CVC"
                 />
                 {creditCardFormik.touched.cvc && creditCardFormik.errors.cvc ? (
                   <Form.Text className="text-danger">
@@ -589,7 +607,7 @@ const BookingPage = () => {
               </Form.Group>
             </div>
             <div className="col-12 text-center">
-              <Button type="submit" className="btn btn-dark rounded-pill mb-3">
+              <Button type="submit" className="btn btn-dark rounded-pill mb-3" aria-label="Submit Credit Card Details Button">
                 Submit Credit Card Details
               </Button>
             </div>
@@ -599,13 +617,13 @@ const BookingPage = () => {
         {step === 4 && (
           <>
             <div className="row pt-3">
-              <p className="text-center">
+              <p className="text-center" aria-label="Confirm Reservation Instructions">
                 Please confirm your booking details are correct before
                 proceeding so that we can hold your table.
               </p>
               <div className="col-sm-12 col-md-7">
-                <table class="table w-100 w-sm-50 mx-auto">
-                  <tbody class="table-group-divider">
+                <table className="table w-100 w-sm-50 mx-auto" aria-label="Booking Details">
+                  <tbody className="table-group-divider">
                     <tr>
                       <th scope="row">First Name</th>
                       <td>{details.firstName}</td>
@@ -616,23 +634,23 @@ const BookingPage = () => {
                     </tr>
                     <tr>
                       <th scope="row">Mobile</th>
-                      <td colspan="2">{details.phone}</td>
+                      <td colSpan="1">{details.phone}</td>
                     </tr>
                     <tr>
                       <th scope="row">Email</th>
-                      <td colspan="2">{details.email}</td>
+                      <td colSpan="2">{details.email}</td>
                     </tr>
                     <tr>
                       <th scope="row">Date</th>
-                      <td colspan="2">{details.date}</td>
+                      <td colSpan="3">{details.date}</td>
                     </tr>
                     <tr>
                       <th scope="row">For</th>
-                      <td colspan="2">{details.partySize}</td>
+                      <td colSpan="4">{details.partySize}</td>
                     </tr>
                     <tr>
                       <th scope="row">Requests</th>
-                      <td colspan="2">{details.specialRequirements}</td>
+                      <td colSpan="5">{details.specialRequirements}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -641,6 +659,7 @@ const BookingPage = () => {
                 <Card
                   className="rounded-3 bg-dark text-light"
                   style={{ width: "300px" }}
+                  aria-label="Credit Card Details"
                 >
                   <Card.Body>
                     <h5>
@@ -653,8 +672,8 @@ const BookingPage = () => {
                       {details.cardholderName}
                     </Card.Text>
                     <div className="d-flex justify-content-between font-monospace">
-                      <span>Expires: {details.expiry}</span>
-                      <span>CVC: {details.cvc}</span>
+                      <span aria-label="Expires">Expires: {details.expiry}</span>
+                      <span aria-label="CVC">CVC: {details.cvc}</span>
                     </div>
                   </Card.Body>
                 </Card>
@@ -662,16 +681,22 @@ const BookingPage = () => {
             </div>
             <div className="row">
               <Form onSubmit={confirmationFormik.handleSubmit}>
-                <div class="form-check d-flex justify-content-center">
+                <div className="form-check d-flex justify-content-center">
                   <input
                     className="form-check-input"
                     type="checkbox"
                     id="acceptTerms"
                     {...confirmationFormik.getFieldProps("acceptTerms")}
+                    aria-label="Accept Terms and Conditions"
                   />
-                  <label class="form-check-label" for="flexCheckDefault">
+                  <label className="form-check-label" htmlFor="acceptTerms">
                     I accept the{" "}
-                    <a href="/terms" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="/terms"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Terms and Conditions"
+                    >
                       terms and conditions
                     </a>{" "}
                     and{" "}
@@ -679,6 +704,7 @@ const BookingPage = () => {
                       href="/privacy"
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label="Reservation Policy"
                     >
                       reservation policy
                     </a>
@@ -693,7 +719,11 @@ const BookingPage = () => {
                     )}
                 </div>
                 <div className="text-center mt-3">
-                  <Button type="submit" className="btn btn-dark rounded-pill">
+                  <Button
+                    type="submit"
+                    className="btn btn-dark rounded-pill"
+                    aria-label="Confirm Reservation Button"
+                  >
                     Confirm Reservation
                   </Button>
                 </div>
@@ -705,10 +735,18 @@ const BookingPage = () => {
         {step === 5 && (
           <div className="alert alert-success text-center" role="alert">
             <h4 className="alert-heading">Reservation Confirmed!</h4>
-            <p>Your reservation has been successfully confirmed. An email with all the details has been sent to your registered email address: <strong>{details.email}</strong></p>
+            <p>
+              Your reservation has been successfully confirmed. An email with all
+              the details has been sent to your registered email address:{" "}
+              <strong>{details.email}</strong>
+            </p>
             <hr />
             <p className="mb-0">Thank you for choosing us! We look forward to serving you.</p>
-            <Link to='/'><button type="button" className="btn btn-success rounded-pill mt-2">Go back to home</button></Link>
+            <Link to='/'>
+              <button type="button" className="btn btn-success rounded-pill mt-2" aria-label="Go back to home">
+                Go back to home
+              </button>
+            </Link>
           </div>
         )}
       </div>

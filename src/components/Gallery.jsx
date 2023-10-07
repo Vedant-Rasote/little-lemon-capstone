@@ -1,19 +1,22 @@
 import React from "react";
-import gal_img_1 from "../images/gal_img_1.jpg";
-import gal_img_2 from "../images/gal_img_2.jpg";
-import gal_img_3 from "../images/gal_img_3.jpg";
-import gal_img_4 from "../images/gal_img_4.jpg";
+import galImg1 from "../images/gal_img_1.jpg";
+import galImg2 from "../images/gal_img_2.jpg";
+import galImg3 from "../images/gal_img_3.jpg";
+import galImg4 from "../images/gal_img_4.jpg";
 
 const Gallery = () => {
   return (
     <>
       <div className="row mb-3" id="gallery">
         <div className="d-flex justify-content-between align-items-center">
-          <h3 className="fw-bold text-body-emphasis lh-1 mb-3">Food Gallery</h3>
+          <h3 className="fw-bold text-body-emphasis lh-1 mb-3" aria-label="Food Gallery">
+            Food Gallery
+          </h3>
           <div className="mb-3">
             <button
               className="btn btn-dark rounded-circle p-3 lh-1 mx-1"
               type="button"
+              aria-label="Previous"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -22,6 +25,7 @@ const Gallery = () => {
                 fill="currentColor"
                 className="bi bi-arrow-left"
                 viewBox="0 0 16 16"
+                aria-hidden="true"
               >
                 <path
                   fillRule="evenodd"
@@ -32,6 +36,7 @@ const Gallery = () => {
             <button
               className="btn btn-dark rounded-circle p-3 lh-1 mx-1"
               type="button"
+              aria-label="Next"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -40,6 +45,7 @@ const Gallery = () => {
                 fill="currentColor"
                 className="bi bi-arrow-right"
                 viewBox="0 0 16 16"
+                aria-hidden="true"
               >
                 <path
                   fillRule="evenodd"
@@ -50,22 +56,23 @@ const Gallery = () => {
           </div>
         </div>
         <div className="col-md-3 col-sm-6">
-          <img src={gal_img_1} className="img-thumbnail" alt="gal_img_1" />
+          <img src={galImg1} className="img-thumbnail" alt="Food Item 1" aria-label="Food Item 1" />
         </div>
         <div className="col-md-3 col-sm-6">
-          <img src={gal_img_2} className="img-thumbnail" alt="gal_img_2" />
+          <img src={galImg2} className="img-thumbnail" alt="Food Item 2" aria-label="Food Item 2" />
         </div>
         <div className="col-md-3 col-sm-6">
-          <img src={gal_img_3} className="img-thumbnail" alt="gal_img_3" />
+          <img src={galImg3} className="img-thumbnail" alt="Food Item 3" aria-label="Food Item 3" />
         </div>
         <div className="col-md-3 col-sm-6">
-          <img src={gal_img_4} className="img-thumbnail" alt="gal_img_4" />
+          <img src={galImg4} className="img-thumbnail" alt="Food Item 4" aria-label="Food Item 4" />
         </div>
       </div>
       <button
         className="btn btn-dark rounded-pill d-block mx-auto"
         id="specials"
         type="button"
+        aria-label="View More Images"
       >
         View More
       </button>

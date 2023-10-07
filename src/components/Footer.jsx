@@ -7,38 +7,38 @@ const Footer = () => {
     <footer className="pt-3" style={{ backgroundImage: `url(${reserveTableBg})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
       <div className="row">
         <div className="col-sm-12 col-md-2 mb-3 mb-md-0 text-center text-sm-start">
-          <img height="180" src={footerLogo} />
+          <img height="180" src={footerLogo} alt="Footer Logo" />
         </div>
         <div className="col-sm-6 col-md-2 mx-auto text-center text-sm-start">
           <u><h5 className="fw-bold text-underline">Navigation</h5></u>
           <ul className="list-unstyled text-small">
             <li>
-              <a className="link-dark text-decoration-none" href="#home">
+              <a className="link-dark text-decoration-none" href="#home" aria-label="Home">
                 Home
               </a>
             </li>
             <li>
-              <a className="link-dark text-decoration-none" href="#about">
+              <a className="link-dark text-decoration-none" href="#about" aria-label="About">
                 About
               </a>
             </li>
             <li>
-              <a className="link-dark text-decoration-none" href="#specials">
+              <a className="link-dark text-decoration-none" href="#specials" aria-label="Menu">
                 Menu
               </a>
             </li>
             <li>
-              <a className="link-dark text-decoration-none" href="#reservation">
+              <a className="link-dark text-decoration-none" href="#reservation" aria-label="Reservation">
                 Reservation
               </a>
             </li>
             <li>
-              <a className="link-dark text-decoration-none" href="#specials">
+              <a className="link-dark text-decoration-none" href="#specials" aria-label="Order online">
                 Order online
               </a>
             </li>
             <li>
-              <a className="link-dark text-decoration-none" href="#contact">
+              <a className="link-dark text-decoration-none" href="#contact" aria-label="Contact">
                 Contact
               </a>
             </li>
@@ -48,18 +48,17 @@ const Footer = () => {
           <u><h5 className="fw-bold text-underline">Contact Us</h5></u>
           <ul className="list-unstyled text-small">
             <li>
-              <a className="link-dark text-decoration-none" href="tel:123 456 6780">
+              <a className="link-dark text-decoration-none" href="tel:123 456 6780" aria-label="Call us at 123 456 6780">
                 <span className="fw-medium">Call:</span> 123 456 6780
               </a>
             </li>
             <li>
-              <a className="link-dark text-decoration-none" href="mailto: info@mysite.com">
+              <a className="link-dark text-decoration-none" href="mailto: info@mysite.com" aria-label="Email us at info@mysite.com">
                 <span className="fw-medium">Email:</span> info@mysite.com
               </a>
             </li>
             <li>
-              <span className="fw-medium">Address:</span> 123 Lemon
-              GroveChicago, IL 60601
+              <span className="fw-medium" aria-label="Address">Address:</span> 123 Lemon Grove, Chicago, IL 60601
             </li>
           </ul>
         </div>
@@ -67,10 +66,10 @@ const Footer = () => {
           <u><h5 className="fw-bold text-underline">Opening Hours</h5></u>
           <ul className="list-unstyled text-small">
             <li>
-              <span className="fw-medium">Mon - Fri:</span> 11am - 10pm
+              <span className="fw-medium" aria-label="Mon - Fri">Mon - Fri:</span> 11am - 10pm
             </li>
             <li>
-              <span className="fw-medium">Sat - Sun:</span> 11am - 12am
+              <span className="fw-medium" aria-label="Sat - Sun">Sat - Sun:</span> 11am - 12am
             </li>
           </ul>
         </div>
@@ -78,17 +77,17 @@ const Footer = () => {
           <u><h5 className="fw-bold text-underline">Legal</h5></u>
           <ul className="list-unstyled text-small">
             <li>
-              <a className="link-dark text-decoration-none" href="#">
+              <a className="link-dark text-decoration-none" href="/" aria-label="Reservation Policy">
                 Reservation Policy
               </a>
             </li>
             <li>
-              <a className="link-dark text-decoration-none" href="#">
+              <a className="link-dark text-decoration-none" href="/" aria-label="Privacy Policy">
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a className="link-dark text-decoration-none" href="#">
+              <a className="link-dark text-decoration-none" href="/" aria-label="Terms & Conditions">
                 Terms & Conditions
               </a>
             </li>
@@ -104,8 +103,9 @@ const Footer = () => {
           <button
             className="btn btn-light border rounded-circle p-3 lh-1 mx-1"
             type="button"
+            aria-label="Visit our Facebook page"
           >
-            <svg
+           <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
@@ -119,6 +119,7 @@ const Footer = () => {
           <button
             className="btn btn-light border rounded-circle p-3 lh-1 mx-1"
             type="button"
+            aria-label="Visit our Instagram page"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -134,6 +135,7 @@ const Footer = () => {
           <button
             className="btn btn-light border rounded-circle p-3 lh-1 mx-1"
             type="button"
+            aria-label="Visit our Twitter page"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
