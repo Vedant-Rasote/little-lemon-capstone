@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import AboutUs from './AboutUs';
+import AboutUs from '../components/AboutUs';
 
 test('renders AboutUs component without errors', () => {
   const { getByText } = render(<AboutUs />);

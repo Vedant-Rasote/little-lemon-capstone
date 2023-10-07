@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import DishCard from './DishCard';
+import DishCard from '../components/DishCard';
 
 test('renders DishCard component', () => {
     render(

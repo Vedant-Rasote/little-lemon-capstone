@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter
-import Hero from './Hero';
+import Hero from '../components/Hero';
 
 test('renders Hero component with buttons', () => {
     const { getByText } = render(

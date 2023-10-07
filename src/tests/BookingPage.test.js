@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import BookingPage from "./BookingPage";
+import BookingPage from "../components/BookingPage";
 
 test("renders BookingPage component without errors", () => {
   const { getByText, getByLabelText, getByPlaceholderText, queryByText } = render(
