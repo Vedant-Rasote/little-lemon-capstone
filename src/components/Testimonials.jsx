@@ -9,7 +9,7 @@ const Testimonials = () => {
         <section id='testimonials' className='py-3' style={{ backgroundImage: `url(${testimonialBg})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
             <h3 className="mb-4 text-center">What Our Customers<br /> Talk About Us</h3>
             <div className='d-flex justify-content-center align-items-center flex-wrap'>
-                <button className="btn btn-dark rounded-circle p-2 lh-1 mx-2" type="button">
+                <button className="btn btn-dark rounded-circle p-2 lh-1 mx-2" type="button" data-testid='left-arrow-button'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-left" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
                     </svg>
@@ -17,13 +17,13 @@ const Testimonials = () => {
                 <img src={testimonial_3} className='mx-2' alt="Bootstrap Themes" loading="lazy" />
                 <img src={testimonial_1} className='mx-2' alt="Bootstrap Themes" loading="lazy" />
                 <img src={testimonial_2} className='mx-2' alt="Bootstrap Themes" loading="lazy" />
-                <button className="btn btn-dark rounded-circle p-2 lh-1 mx-2" type="button">
+                <button className="btn btn-dark rounded-circle p-2 lh-1 mx-2" type="button" data-testid='right-arrow-button'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                     </svg>
                 </button>
             </div>
-            <div className='text-center'>
+            <div className='text-center' data-testid='caret-down-icon'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-caret-down-fill" viewBox="0 0 16 16">
                     <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
                 </svg>

@@ -71,6 +71,7 @@ const Specials = () => {
                             price={dish.price}
                             starRating={dish.starRating}
                             reviewsCount={dish.reviewsCount}
+                            data-testid={`dish-card-${index}`}
                         />
                     </div>
                 ))}
