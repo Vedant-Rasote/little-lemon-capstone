@@ -315,7 +315,7 @@ const BookingPage = () => {
         </div> */}
             <div className="col-md-6">
               <Form.Group>
-                <Form.Label>Date</Form.Label>
+                <Form.Label htmlFor="date">Date</Form.Label>
                 <Form.Control
                   type="date"
                   id="date"
@@ -332,7 +332,7 @@ const BookingPage = () => {
             </div>
             <div className="col-md-6">
               <Form.Group>
-                <Form.Label>Time</Form.Label>
+                <Form.Label htmlFor="time">Time</Form.Label>
                 <Form.Control
                   as="select"
                   id="time"
@@ -358,7 +358,7 @@ const BookingPage = () => {
             </div>
             <div className="col-md-6">
               <Form.Group>
-                <Form.Label>Party Size</Form.Label>
+                <Form.Label htmlFor="partySize">Party Size</Form.Label>
                 <Form.Control
                   type="number"
                   id="partySize"
@@ -375,7 +375,7 @@ const BookingPage = () => {
             </div>
             <div className="col-md-6">
               <Form.Group>
-                <Form.Label>Occasion</Form.Label>
+                <Form.Label htmlFor="occasion">Occasion</Form.Label>
                 <Form.Control
                   as="select"
                   id="occasion"
@@ -417,7 +417,7 @@ const BookingPage = () => {
             <p className="text-center">Please provide your personal details.</p>
             <div className="col-md-6">
               <Form.Group>
-                <Form.Label>First Name</Form.Label>
+                <Form.Label htmlFor="firstName">First Name</Form.Label>
                 <Form.Control
                   type="text"
                   id="firstName"
@@ -435,7 +435,7 @@ const BookingPage = () => {
             </div>
             <div className="col-md-6">
               <Form.Group>
-                <Form.Label>Last Name</Form.Label>
+                <Form.Label htmlFor="lastName">Last Name</Form.Label>
                 <Form.Control
                   type="text"
                   id="lastName"
@@ -453,7 +453,7 @@ const BookingPage = () => {
             </div>
             <div className="col-md-6">
               <Form.Group>
-                <Form.Label>Phone</Form.Label>
+                <Form.Label htmlFor="phone">Phone</Form.Label>
                 <Form.Control
                   type="tel"
                   id="phone"
@@ -471,7 +471,7 @@ const BookingPage = () => {
             </div>
             <div className="col-md-6">
               <Form.Group>
-                <Form.Label>Email</Form.Label>
+                <Form.Label htmlFor="email">Email</Form.Label>
                 <Form.Control
                   type="email"
                   id="email"
@@ -489,7 +489,7 @@ const BookingPage = () => {
             </div>
             <div className="col-md-12">
               <Form.Group>
-                <Form.Label>Special Requirements</Form.Label>
+                <Form.Label htmlFor="specialRequirements">Special Requirements</Form.Label>
                 <Form.Control
                   as="textarea"
                   id="specialRequirements"
@@ -519,9 +519,11 @@ const BookingPage = () => {
             </p>
             <div className="col-md-6">
               <Form.Group>
-                <Form.Label>Cardholder Name</Form.Label>
+                <Form.Label htmlFor="cardholderName">Cardholder Name</Form.Label>
                 <Form.Control
                   type="text"
+                  name="cardholderName"
+                  id="cardholderName"
                   placeholder="Enter cardholder name"
                   {...creditCardFormik.getFieldProps("cardholderName")}
                 />
@@ -535,9 +537,11 @@ const BookingPage = () => {
             </div>
             <div className="col-md-6">
               <Form.Group>
-                <Form.Label>Card Number</Form.Label>
+                <Form.Label htmlFor="cardNumber">Card Number</Form.Label>
                 <Form.Control
                   type="text"
+                  name="cardNumber"
+                  id="cardNumber"
                   placeholder="Enter card number"
                   {...creditCardFormik.getFieldProps("cardNumber")}
                 />
@@ -551,10 +555,12 @@ const BookingPage = () => {
             </div>
             <div className="col-md-6">
               <Form.Group>
-                <Form.Label>Expiry Date</Form.Label>
+                <Form.Label htmlFor="expiry">Expiry Date</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="MM/YY"
+                  name="expiry"
+                  id="expiry"
                   {...creditCardFormik.getFieldProps("expiry")}
                 />
                 {creditCardFormik.touched.expiry &&
@@ -567,9 +573,11 @@ const BookingPage = () => {
             </div>
             <div className="col-md-6">
               <Form.Group>
-                <Form.Label>CVC</Form.Label>
+                <Form.Label htmlFor="cvc">CVC</Form.Label>
                 <Form.Control
                   type="text"
+                  name="cvc"
+                  id="cvc"
                   placeholder="Enter CVC"
                   {...creditCardFormik.getFieldProps("cvc")}
                 />
