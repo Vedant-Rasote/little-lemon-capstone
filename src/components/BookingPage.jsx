@@ -5,7 +5,31 @@ import { Card, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const BookingPage = () => {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState({
+    'step1': {
+      isCurrent: true,
+      isComplete: false
+    },
+    'step2': {
+      isCurrent: false,
+      isComplete: false
+    },
+    'step3': {
+      isCurrent: false,
+      isComplete: false
+    },
+    'step4': {
+      isCurrent: false,
+      isComplete: false
+    },
+    'step5': {
+      isCurrent: false,
+      isComplete: false
+    }
+  });
+
+  console.log(step);
+
   const [details, setDetails] = useState({
     partySize: "",
     date: "",
@@ -56,8 +80,19 @@ const BookingPage = () => {
   });
 
   const reservationOnSubmit = (values) => {
-    console.log(values);
-    setStep(2);
+    let stepsData = {
+      ...step,
+      'step1': {
+        isCurrent: false,
+        isComplete: true
+      },
+      'step2': {
+        isCurrent: true,
+        isComplete: false
+      }
+    };
+    setStep(stepsData);
+    console.log(step);
 
     let data = {
       ...details,
@@ -97,8 +132,19 @@ const BookingPage = () => {
   });
 
   const personalDetailsOnSubmit = (values) => {
-    console.log(values);
-    setStep(3);
+    let stepsData = {
+      ...step,
+      'step2': {
+        isCurrent: false,
+        isComplete: true
+      },
+      'step3': {
+        isCurrent: true,
+        isComplete: false
+      },
+    };
+    setStep(stepsData);
+    console.log(step);
 
     let data = {
       ...details,
@@ -141,8 +187,19 @@ const BookingPage = () => {
   });
 
   const creditCardOnSubmit = (values) => {
-    console.log(values);
-    setStep(4);
+    let stepsData = {
+      ...step,
+      'step3': {
+        isCurrent: false,
+        isComplete: true
+      },
+      'step4': {
+        isCurrent: true,
+        isComplete: false
+      },
+    };
+    setStep(stepsData);
+    console.log(step);
 
     let data = {
       ...details,
@@ -162,16 +219,37 @@ const BookingPage = () => {
     acceptTerms: false,
   };
 
-  const confirmationValidationSchema = Yup.object({
+  const allStepsCompleted = (stepState) => {
+    const stepsToCheck = ['step1', 'step2', 'step3'];
+    return stepsToCheck.every((step) => stepState[step].isComplete);
+  };
+
+  const confirmationValidationSchema = Yup.object().shape({
     acceptTerms: Yup.boolean().oneOf(
       [true],
       "You must accept the Terms and Conditions and Reservation Policy"
     ),
+    allStepsCompleted: Yup.boolean().test(
+      'all-steps-completed',
+      'Please complete the previous steps before proceeding!!',
+      () => allStepsCompleted(step)
+    ),
   });
 
   const confirmationOnSubmit = (values) => {
-    console.log(values);
-    setStep(5);
+    let stepsData = {
+      ...step,
+      'step4': {
+        isCurrent: false,
+        isComplete: true
+      },
+      'step5': {
+        isCurrent: true,
+        isComplete: false
+      },
+    };
+    setStep(stepsData);
+    console.log(step);
 
     let data = {
       ...details,
@@ -192,13 +270,33 @@ const BookingPage = () => {
         <ul className="d-flex nav nav-underline nav justify-content-center pt-5 flex-nowrap">
           <li className="nav-item">
             <a
-              className={`nav-link link-dark text-decoration-none ${step === 1 ? "active fw-medium" : ""
+              className={`nav-link link-dark text-decoration-none ${step.step1.isCurrent ? "active fw-medium" : ""
                 }`}
               aria-current="page"
               href="/booking"
               onClick={(e) => {
                 e.preventDefault();
-                setStep(1);
+                let stepsData = {
+                  ...step,
+                  'step1': {
+                    ...step.step1,
+                    isCurrent: true
+                  },
+                  'step2': {
+                    ...step.step2,
+                    isCurrent: false
+                  }, 'step3': {
+                    ...step.step3,
+                    isCurrent: false
+                  }, 'step4': {
+                    ...step.step4,
+                    isCurrent: false
+                  }, 'step5': {
+                    ...step.step5,
+                    isCurrent: false
+                  }
+                };
+                setStep(stepsData);
               }}
               aria-label="Reservation Details"
             >
@@ -223,12 +321,34 @@ const BookingPage = () => {
           <p className="nav-link link-dark text-decoration-none">{">"}</p>
           <li className="nav-item">
             <a
-              className={`nav-link link-dark text-decoration-none ${step === 2 ? "active fw-medium" : ""
+              className={`nav-link link-dark text-decoration-none ${step.step2.isCurrent ? "active fw-medium" : ""
                 }`}
               href="/booking"
               onClick={(e) => {
                 e.preventDefault();
-                setStep(2);
+                if (step.step1.isComplete) {
+                  let stepsData = {
+                    ...step,
+                    'step1': {
+                      ...step.step1,
+                      isCurrent: false
+                    },
+                    'step2': {
+                      ...step.step2,
+                      isCurrent: true
+                    }, 'step3': {
+                      ...step.step3,
+                      isCurrent: false
+                    }, 'step4': {
+                      ...step.step4,
+                      isCurrent: false
+                    }, 'step5': {
+                      ...step.step5,
+                      isCurrent: false
+                    }
+                  };
+                  setStep(stepsData);
+                }
               }}
               aria-label="Your Details"
             >
@@ -252,12 +372,34 @@ const BookingPage = () => {
           <p className="nav-link link-dark text-decoration-none">{">"}</p>
           <li className="nav-item">
             <a
-              className={`nav-link link-dark text-decoration-none ${step === 3 ? "active fw-medium" : ""
+              className={`nav-link link-dark text-decoration-none ${step.step3.isCurrent ? "active fw-medium" : ""
                 }`}
               href="/booking"
               onClick={(e) => {
                 e.preventDefault();
-                setStep(3);
+                if (step.step1.isComplete) {
+                  let stepsData = {
+                    ...step,
+                    'step1': {
+                      ...step.step1,
+                      isCurrent: false
+                    },
+                    'step2': {
+                      ...step.step2,
+                      isCurrent: false
+                    }, 'step3': {
+                      ...step.step3,
+                      isCurrent: true
+                    }, 'step4': {
+                      ...step.step4,
+                      isCurrent: false
+                    }, 'step5': {
+                      ...step.step5,
+                      isCurrent: false
+                    }
+                  };
+                  setStep(stepsData);
+                }
               }}
               aria-label="Credit Card Details"
             >
@@ -281,12 +423,34 @@ const BookingPage = () => {
           <p className="nav-link link-dark text-decoration-none">{">"}</p>
           <li className="nav-item">
             <a
-              className={`nav-link link-dark text-decoration-none ${step === 4 ? "active fw-medium" : ""
+              className={`nav-link link-dark text-decoration-none ${step.step4.isCurrent ? "active fw-medium" : ""
                 }`}
               href="/booking"
               onClick={(e) => {
                 e.preventDefault();
-                setStep(4);
+                if (step.step1.isComplete) {
+                  let stepsData = {
+                    ...step,
+                    'step1': {
+                      ...step.step1,
+                      isCurrent: false
+                    },
+                    'step2': {
+                      ...step.step2,
+                      isCurrent: false
+                    }, 'step3': {
+                      ...step.step3,
+                      isCurrent: false
+                    }, 'step4': {
+                      ...step.step4,
+                      isCurrent: true
+                    }, 'step5': {
+                      ...step.step5,
+                      isCurrent: false
+                    }
+                  };
+                  setStep(stepsData);
+                }
               }}
               aria-label="Summary"
             >
@@ -308,7 +472,7 @@ const BookingPage = () => {
           </li>
         </ul>
 
-        {step === 1 && (
+        {step.step1.isCurrent && (
           <Form
             className="row g-3 pt-3"
             onSubmit={reservationFormik.handleSubmit}
@@ -418,7 +582,7 @@ const BookingPage = () => {
           </Form>
         )}
 
-        {step === 2 && (
+        {step.step2.isCurrent && (
           <Form
             className="row g-3 pt-3"
             onSubmit={personalDetailsFormik.handleSubmit}
@@ -524,7 +688,7 @@ const BookingPage = () => {
           </Form>
         )}
 
-        {step === 3 && (
+        {step.step3.isCurrent && (
           <Form
             className="row g-3 pt-3"
             onSubmit={creditCardFormik.handleSubmit}
@@ -614,7 +778,7 @@ const BookingPage = () => {
           </Form>
         )}
 
-        {step === 4 && (
+        {step.step4.isCurrent && (
           <>
             <div className="row pt-3">
               <p className="text-center" aria-label="Confirm Reservation Instructions">
@@ -688,6 +852,7 @@ const BookingPage = () => {
                     id="acceptTerms"
                     {...confirmationFormik.getFieldProps("acceptTerms")}
                     aria-label="Accept Terms and Conditions"
+                    defaultChecked={details.acceptTerms}
                   />
                   <label className="form-check-label" htmlFor="acceptTerms">
                     I accept the{" "}
@@ -717,6 +882,11 @@ const BookingPage = () => {
                         {confirmationFormik.errors.acceptTerms}
                       </div>
                     )}
+                  {confirmationFormik.errors.allStepsCompleted && (
+                      <div className="text-danger">
+                        {confirmationFormik.errors.allStepsCompleted}
+                      </div>
+                    )}
                 </div>
                 <div className="text-center mt-3">
                   <Button
@@ -732,7 +902,7 @@ const BookingPage = () => {
           </>
         )}
 
-        {step === 5 && (
+        {step.step5.isCurrent && (
           <div className="alert alert-success text-center" role="alert">
             <h4 className="alert-heading">Reservation Confirmed!</h4>
             <p>
